@@ -8,7 +8,7 @@ from mavsdk import System
 
 port = "/dev/ttyACM0"
 running = True
-with open("/home/miriam/Desktop/rssi2.csv", "w") as csvFile:
+with open("/home/miriam/Relaying-Active-Connectivity-with-UAV/rssi5.csv", "w") as csvFile:
     while running:
         rssi = readRSSI.RSSI(port)
 
@@ -25,10 +25,10 @@ with open("/home/miriam/Desktop/rssi2.csv", "w") as csvFile:
             csvFile.write('{}'.format(curr_time))
             csvFile.write('{}'.format('\n'))
 
+        """
         if value < -80:
             print("flying")
-
-
+            
             async def run():
                 drone = System()
                 # change port according to the port the telemetry radio has on laptop
@@ -55,7 +55,7 @@ with open("/home/miriam/Desktop/rssi2.csv", "w") as csvFile:
             if __name__ == "__main__":
                 loop = asyncio.get_event_loop()
                 loop.run_until_complete(run())
-
-    running = False
+            """
+   # running = False
 
 
