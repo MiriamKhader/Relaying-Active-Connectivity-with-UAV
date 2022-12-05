@@ -4,7 +4,7 @@ import csv
 x = []
 y = []
 
-with open("/home/miriam/Relaying-Active-Connectivity-with-UAV/rssi5_constantReading.csv", 'r') as csvfile:
+with open("/home/miriam/Relaying-Active-Connectivity-with-UAV/rssi3_flying_lp1_lp3.csv", 'r') as csvfile:
     plots = csv.reader(csvfile)
 
     for row in plots:
@@ -24,11 +24,11 @@ with open("/home/miriam/Relaying-Active-Connectivity-with-UAV/rssi5_constantRead
 
 
 plt.box(None)
-plt.scatter(x,y, color="hotpink", alpha=0.5)
-plt.plot(x,y, color="orchid")
-#plt.axvspan(-2, 190, facecolor='orchid', alpha = 0.5)
-#plt.axvspan(35, 82, facecolor='coral', alpha = 0.5, label="Flying")
-#plt.axvspan(82, 190, facecolor='tomato', alpha = 0.5, label="Crashing")
+plt.scatter(x,y, color="mediumpurple")
+plt.plot(x,y)
+plt.axvspan(-2, 50, facecolor='orchid', alpha = 0.5, label="initial")
+plt.axvspan(50, 60, facecolor='coral', alpha = 0.35, label="Flying")
+#plt.axvspan(82, 190, facecolor='aquamarine', alpha = 0.5, label="Crashing")
 
 plt.title("RSSI between two stationary launchpads")
 plt.legend(facecolor="white")
